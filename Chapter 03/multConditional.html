@@ -1,0 +1,30 @@
+<!--GTG-->
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Using Multiple Conditionals</title>
+  </head>
+
+  <body>
+    <script>
+      let age = parseInt(prompt("Enter age", 30), 10);
+      if (age >= 0 && age <= 10){
+        document.write("Age is between 0 and 10 <br />");
+      }
+      if (!(age >= 0 && age <= 10)){
+        document.write("Age is not betwee 0 and 10 <br />");
+      }
+      if(age >= 80 || age <= 10){
+        document.write("Age is greater than 80 or less than 10 <br />");
+      }
+      if ((age >= 30 && age <= 39) || (age >= 80 && age <= 89)){
+        document.write("Age is between 30 and 39 or 80 and 89 <br />");
+      }
+    </script>
+  </body>
+  
+</html>
+
+<!--TYJC-->
