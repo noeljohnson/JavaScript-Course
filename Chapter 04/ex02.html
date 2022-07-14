@@ -1,0 +1,61 @@
+<!--GTG-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exploring Functions</title>
+  </head>
+
+  <body>
+    <script>
+      function dispTable(multiplier, start, end){
+        for (let i = start; i <= end; i++){
+          document.write(multiplier + " * " + i + " = " + multiplier * i + "<br />")
+        }
+      }
+
+      function promptValidate(message, def_val){
+        let res;
+        let flag = false;
+        do{
+          if(flag){
+            alert("Invalid entry, try again");
+          }
+          res = prompt(message, def_val);
+          flag = true;
+        }while(isNaN(res) || res === "");
+        return (parseInt(res, 10));
+      }
+
+      function getParams(){
+        let mult = promptValidate("Enter multiplier", 4);
+        if (mult === -1){
+          return false;
+        }
+        let start = promptValidate("Enter start", 4);
+        if (start === -1){
+          return false;
+        }
+        let end = promptValidate("Enter end", 9);
+        if (end === -1){
+          return false;
+        }
+
+        dispTable(mult, start, end);
+        return true;
+      }
+
+      let shldExec;
+      do{
+        shldExec = getParams();
+        document.write("<br /><br />")
+      }while(shldExec);
+
+      document.write("Done Executing<br />")
+    </script>
+  </body>
+</html>
+
+<!--TYJC-->
