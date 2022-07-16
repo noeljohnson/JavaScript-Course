@@ -1,0 +1,33 @@
+<!--GTG-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>String Counting</title>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <script>
+      let myString = "Welcome to Wrox Books. " + 
+        "The Wrox website is www.wrox.com. "+
+        "Visit the Wrox website today. Thanks for buying Wrox";
+      document.write("Finding the number of occurence of \'Wrox\' in \'" + myString  + "\'<br />");
+
+      let findWord = "Wrox";
+      
+      let foundAtPosition = myString.indexOf(findWord);
+      let wroxCount = 0;
+
+      while (foundAtPosition != -1){
+        wroxCount++;
+        foundAtPosition = myString.indexOf(findWord, foundAtPosition + 1);
+      }
+
+      document.write("Found : " + wroxCount + " ocuurences<br />")
+    </script>
+  </body>
+
+</html>
+<!--TYJC-->

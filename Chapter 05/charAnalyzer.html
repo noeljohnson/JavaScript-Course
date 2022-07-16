@@ -1,0 +1,42 @@
+<!--GTG-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>String Counting</title>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <script>
+      function getType(word){
+        firstCharCode = word.charCodeAt(0);
+        if (firstCharCode >= "A".charCodeAt(0) && firstCharCode <= "Z".charCodeAt(0)){
+          return "U";
+        } else if (firstCharCode >= "a".charCodeAt(0) && firstCharCode <= "x".charCodeAt(0)){
+          return "L";
+        }else if (firstCharCode >= "0".charCodeAt(0) && firstCharCode <= "9".charCodeAt(0)){
+          return "N";
+        }
+      }
+      word  = prompt("Enter word", "Hello World")
+      switch(getType(word)){
+        case "U":
+          document.write("The first character is an upper case");
+          break;
+        case "L":
+          document.write("The first character is lower case");
+          break;
+        case "N":
+          document.write("The first character is a number");
+          break;
+        default:
+          document.write("Couldnt identify properly the first character");
+          break;
+      }
+    </script>
+  </body>
+
+</html>
+<!--TYJC-->
