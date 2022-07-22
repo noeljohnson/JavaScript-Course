@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Seperating Elements</title>
+  </head>
+
+  <body>
+    <script>
+      function isLessThan3(value, elem, array){
+        return (value < 3);
+      }
+      let num = [1, 2, 3, 4, 5]
+      document.write("num.every(isLessThan3) : " + num.every(isLessThan3) + "<br />");
+      document.write("num.some(isLessThan3) : " + num.some(isLessThan3) + "<br />");
+      document.write("Filter out the numbers less than 3<br />");
+      document.write("<ul>\n<li>");
+      document.write(num.filter(isLessThan3).join("</li><li>"));
+      document.write("</li>\n</ul>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mapping each element</title>
+  </head>
+
+  <body>
+    <script>
+      function doublePrint(elem, index, array){
+        document.write(elem * 2 + "<br />");
+      }
+
+      function double(elem, index, array){
+        return(elem * 2);
+      }
+
+      arr = [1, 2, 3, 4, 5]
+      document.write("Using for each<br />");
+      arr.forEach(doublePrint);
+      document.write("<br />Using maps : ");
+      document.write(arr.map(double).join(", "));
+    </script>
+  </body>
+</html>

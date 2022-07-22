@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sorting Arrays</title>
+  </head>
+
+  <body>
+    <script>
+      let myShopping = ["Eggs", "Milk", "Potatoes", "Cereal", "Banana"];
+      let sortChoice = prompt("Enter 1 for alpahbetical order "+
+        "and -1 for reverse alphabetical order", 1);
+
+      if (sortChoice == "1"){
+        myShopping.sort();
+        document.write(myShopping.join("<br />"));
+      }else if(sortChoice == "-1"){
+        myShopping.sort();
+        myShopping.reverse();
+        document.write(myShopping.join("<br />"));
+      }else{
+        document.write("Invalid Option");
+      }
+    </script>
+  </body>
+</html>
