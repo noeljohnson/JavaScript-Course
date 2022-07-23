@@ -1,0 +1,46 @@
+<!--GTG-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Date Objects</title>
+  </head>
+
+  <body>
+    <script>
+      function suffixOfNum(num){
+        let numSuffix = ""
+        switch(num % 10){
+          case 1:
+            numSuffix = "st";
+            break;
+          case 2:
+            numSuffix = "nd";
+            break;
+          case 3:
+            numSuffix = "rd";
+            break;
+          default:
+            numSuffix = "th";
+            break;
+        }
+        return(numSuffix);
+      }
+      let months = ["January", "February", "March", "April", "May", "June", "July", "August",
+        "September", "October", "November", "December"];
+      let today = new Date();
+      let year = today.getFullYear();
+      let month = today.getMonth() + 1;
+      let monthName = months[today.getMonth()];
+      let day = today.getDate();
+      let yearSuffix = suffixOfNum(year);
+      let monthSuffix = suffixOfNum(months.indexOf(month) + 1);
+      let daySuffix = suffixOfNum(day);
+      document.write("Today is the " + day + daySuffix +" day ");
+      document.write("of the " + month + monthSuffix + '(' + monthName + ") month ");
+      document.write("of the " + year + yearSuffix + " year");
+    </script>
+  </body>
+</html>
+<!--TYJC-->

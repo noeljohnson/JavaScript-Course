@@ -1,0 +1,22 @@
+<!--GTG-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Round function</title>
+  </head>
+
+  <body>
+    <script>
+      function fixPrec(num, prec){
+        multi = Math.pow(10, prec)
+        return (Math.round(num * multi) / multi)
+      }
+      let myNum = prompt("Enter the number", 1.4325);
+      let prec = parseInt(prompt("Enter precision", 2));
+      document.write("<p>The number (" + myNum + ") with " + prec + " digit precision is " + fixPrec(myNum, prec) +"</p>")
+    </script>
+  </body>
+</html>
+<!--TYJC-->
